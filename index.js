@@ -108,7 +108,7 @@ for (const archivo of archivosDentroDeDescargas) {
                 }
                 const rutaOrigenVideo = path.join(carpetaDescargas, archivo)
                 const rutaDestinoVideo = path.join(carpetaVideo, archivo)
-                fs.renameSync(rutaOrigenVideo, rutaOrigenVideo)
+                fs.renameSync(rutaOrigenVideo, rutaDestinoVideo)
                 console.log(`Archivo ${archivo} se ha movido correctamente a ${rutaDestinoVideo}`)
             } catch (error) {
                 console.error(`Ha ocurrido un error intentando mover el ${archivo} a ${carpetaVideo}`)
