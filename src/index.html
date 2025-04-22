@@ -6,20 +6,23 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
     <title>Organizador de Archivos</title>
     <link rel="stylesheet" href="./styles/output.css">
 </head>
 
-<body class="bg-neutral-800 min-h-dvh">
-    <header class="flex justify-between items-center px-12 w-full h-12">
+<body class="flex gap-4 bg-neutral-800 min-h-dvh">
+    <header class="flex relative left-0 flex-col justify-around items-center px-12 py-8 h-dvh w-sm max-xl:w-xs bg-neutral-600">
         <div class="flex justify-center items-center header-left">
             <h1 class="text-3xl font-extrabold text-white">Files Organizer</h1>
         </div>
-        <div class="flex justify-center items-center header-right">
-            <ul class="flex justify-between items-center font-semibold text-white">
-                <li class="mr-8"><a href="./index.html">Inicio</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-            </ul>
+        <div class="flex flex-col gap-4 justify-center items-center font-semibold text-white header-right">
+            <a href="./index.html">Inicio</a>
+            <a href="./contacto.html">Contacto</a>
         </div>
     </header>
     <main class="text-white min-h-">
