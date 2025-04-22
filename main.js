@@ -9,9 +9,13 @@ const createWindow = () => {
     // ? Creamos una instancia de BrowserWindow y lo guardamos en la variable win
     // ? Le asignamos un ancho y alto de 800px y 600px respectivamente
     const win = new BrowserWindow({
-        width: 1980,
-        height: 1080
+        width: 1000,
+        height: 800,
+        icon: './public/favicon/favicon-96x96.png'
     })
+
+    // ? Removemos el menú por defecto de la aplicación
+    win.removeMenu()
 
     // ? Cargamos el archivo index.html en la ventana
     win.loadFile('./src/index.html')
