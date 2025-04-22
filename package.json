@@ -5,13 +5,21 @@
   "main": "index.js",
   "scripts": {
     "dev": "node --watch index.js",
-    "start": "electron main.js"
+    "start": "electron main.js",
+    "build:css": "npx @tailwindcss/cli -i ./src/styles/index.css -o ./src/styles/output.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "electron": "^35.1.5"
+    "autoprefixer": "^10.4.21",
+    "electron": "^35.1.5",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.4"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.4",
+    "@tailwindcss/postcss": "^4.1.4"
   }
 }
