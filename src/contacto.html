@@ -10,29 +10,176 @@
     <link rel="manifest" href="favicon/site.webmanifest" />
     <title>Contáctame</title>
     <link rel="stylesheet" href="./styles/output.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/script.js" defer></script>
 </head>
-<body class="flex gap-4 bg-neutral-800 min-h-dvh">
-    <header class="flex relative left-0 flex-col justify-around items-center px-12 py-8 h-dvh w-sm max-xl:w-xs bg-neutral-600">
-        <div class="flex justify-center items-center header-left">
-            <h1 class="text-3xl font-extrabold text-white" id="header-title">Files Organizer</h1>
+<body class="flex flex-col bg-[#1F2937] min-h-dvh text-white w-full">
+    <header class="flex justify-between items-center px-12 h-16 bg-[#111827] text-white font-inter w-full">
+        <div class="flex gap-2 justify-center items-center w-max header-left h-max">
+            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24"><path fill="#2ac0ec" d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h6l2 2h8q.825 0 1.413.588T22 8H4v10l2.4-8h17.1l-2.575 8.575q-.2.65-.737 1.038T19 20z"/></svg>
+            <h1 class="text-2xl font-bold">Files Organizer</h1>
         </div>
-        <div class="flex flex-col gap-4 justify-center items-center font-semibold text-white header-right">
-            <a href="./index.html" class="relative w-max h-max before:absolute before:content-[''] before:w-0 before:-bottom-1 hover:before:w-full before:bg-white before:h-1 before:transition-all before:duration-200">Inicio</a>
-            <a href="./contacto.html" class="relative w-max h-max before:absolute before:content-[''] before:w-0 before:-bottom-1 hover:before:w-full before:bg-white before:h-1 before:transition-all before:duration-200">Contacto</a>
-            <a href="./config.html" class="relative w-max h-max before:absolute before:content-[''] before:w-0 before:-bottom-1 hover:before:w-full before:bg-white before:h-1 before:transition-all before:duration-200">Configuración</a>
+        <div class="header-right">
+            <ul class="flex gap-12 justify-center items-center w-max h-max nav-list">
+                <li class="flex gap-1 justify-between w-max items-center transition-colors duration-200 hover:text-[#3B82F6] relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3L2 12h3v8z"/></svg>
+                    <a href="./index.html" class="relative">Inicio</a>
+                </li>
+                <li class="flex gap-1 justify-between w-max items-center transition-colors duration-200 hover:text-[#3B82F6]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><defs><mask id="ipSConfig0"><g fill="none" stroke-linejoin="round" stroke-width="4"><path fill="#fff" stroke="#fff" d="m24 4l-6 6h-8v8l-6 6l6 6v8h8l6 6l6-6h8v-8l6-6l-6-6v-8h-8z"/><path fill="#000" stroke="#000" d="M24 30a6 6 0 1 0 0-12a6 6 0 0 0 0 12Z"/></g></mask></defs><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#ipSConfig0)"/></svg>
+                    <a href="./config.html" class="relative">Configuración</a>
+                </li>
+                <li class="flex gap-1 justify-between w-max items-center text-[#3B82F6] relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="m20 8l-8 5l-8-5V6l8 5l8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"/></svg>
+                    <a href="./contacto.html" class="relative" id="active">Contacto</a>
+                </li>
+            </ul>
         </div>
     </header>
-    <main class="relative text-white min-h-[90dvh] w-full py-4">
-        <section>
-            <div class="flex justify-center items-center w-full section-title">
-                <h1 class="text-5xl font-extrabold leading-normal">Contáctame</h1>
+    <main class="flex flex-col">
+        <div class="contact-title flex flex-col items-center justify-around gap-4 min-h-[12dvh] mt-5">
+            <h2 class="text-4xl font-bold leading-normal">Get in Touch</h2>
+            <p class="leading-normal max-w-[70ch] text-center">Have questions about Files Organizer? Want to report a bug or suggest a feature? Fill out the form below and we'll get back to you as soon as possible.</p>
+        </div>
+        <section class="flex gap-4 justify-center items-center form-info-container min-h-[70dvh]">
+            <div class="sub-container h-[60dvh] form-info-container flex gap-8 justify-center items-center">
+                <div class="h-full form w-2xl bg-[#111827] p-4 rounded-lg">
+                    <form class="flex flex-col gap-4 justify-around p-4 w-full h-full form-message">
+                        <h3 class="text-2xl font-semibold">Send a Message</h3>
+                        <div class="flex gap-4 justify-around w-full name-email">
+                            <div class="flex flex-col gap-1 w-full name">
+                                <label for="name">Name</label>
+                                <input type="text" placeholder="Your name" id="name" name="name" class="bg-[#1F2937] px-4 h-12 rounded-lg outline-0 w-full">
+                            </div>
+                            <div class="flex flex-col gap-1 w-full email">
+                                <label for="email">Email</label>
+                                <input type="text" placeholder="your.email@example.com" id="email" name="email" class="bg-[#1F2937] px-4 h-12 rounded-lg outline-0 w-full">
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-1 w-full subject">
+                            <label for="subject">Subject</label>
+                            <input type="text" placeholder="What is this about?" id="subject" name="subject" class="w-full bg-[#1F2937] px-4 h-12 rounded-lg outline-0">
+                        </div>
+                        <div class="flex flex-col gap-1 w-full message">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" placeholder="Type your message here..." class="w-full bg-[#1F2937] px-4 h-40 rounded-lg py-2 outline-0"></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="submit" class="bg-[#3b83f6c8] active:bg-[#3b83f684] transition-colors duration-200 w-max h-max px-4 py-2 flex justify-center items-center rounded-lg gap-4 cursor-pointer submit-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="m2.6 13.083l3.452 1.511L16 9.167l-6 7l8.6 3.916a1 1 0 0 0 1.399-.85l1-15a1.002 1.002 0 0 0-1.424-.972l-17 8a1.002 1.002 0 0 0 .025 1.822M8 22.167l4.776-2.316L8 17.623z"/></svg>
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="info bg-[#111827] w-xs h-full flex flex-col p-8 rounded-lg gap-4">
+                    <h3 class="text-2xl font-semibold leading-normal">Connect With Us</h3>
+                    <div class="flex flex-col gap-8 social">
+                        <div class="flex gap-4 email">
+                            <div class="flex justify-center items-center p-2 w-max rounded-full email-icon-container h-max bg-[#1F2937]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#3B82F6" d="m20 8l-8 5l-8-5V6l8 5l8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2"/></svg>
+                            </div>
+                            <div class="email-info">
+                                <h4 class="font-semibold">Email</h4>
+                                <a href="mailto:mathiassaid7@gmail.com" class="text-[#60A5FA]">mathiassaid7@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 github">
+                            <div class="flex justify-center items-center p-2 w-max rounded-full email-icon-container h-max bg-[#1F2937]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 16 16"><path fill="#60A5FA" fill-rule="evenodd" d="M11.5 4.5a1 1 0 1 0 0-2a1 1 0 0 0 0 2m2.5-1a2.5 2.5 0 0 1-1.872 2.42A3.5 3.5 0 0 1 8.75 8.5h-1.5a2 2 0 0 0-1.965 1.626a2.501 2.501 0 1 1-1.535-.011v-4.23a2.501 2.501 0 1 1 1.5 0v1.742a3.5 3.5 0 0 1 2-.627h1.5a2 2 0 0 0 1.823-1.177A2.5 2.5 0 1 1 14 3.5m-8.5 9a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-9a1 1 0 1 1-2 0a1 1 0 0 1 2 0" clip-rule="evenodd"/></svg>
+                            </div>
+                            <div class="email-info">
+                                <h4 class="font-semibold">GitHub</h4>
+                                <a href="https://github.com/JunLovin/filesOrganizer" class="text-[#60A5FA]">@JunLovin/filesOrganizer</a>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 response">
+                            <div class="flex justify-center items-center p-2 w-max rounded-full email-icon-container h-max bg-[#1F2937]">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#60A5FA" d="M17 3.34a10 10 0 1 1-14.995 8.984L2 12l.005-.324A10 10 0 0 1 17 3.34M12 6a1 1 0 0 0-.993.883L11 7v5l.009.131a1 1 0 0 0 .197.477l.087.1l3 3l.094.082a1 1 0 0 0 1.226 0l.094-.083l.083-.094a1 1 0 0 0 0-1.226l-.083-.094L13 11.585V7l-.007-.117A1 1 0 0 0 12 6"/></svg>
+                            </div>
+                            <div class="email-info">
+                                <h4 class="font-semibold">Response Time</h4>
+                                <p class="text-[#D1D5DB]">Usually within 24-48 hours</p>
+                            </div>
+                        </div>
+                        <hr class="">
+                        <button class="bg-[#1F2937] flex justify-center items-center w-full rounded-md gap-2 h-12 py-2 cursor-pointer git-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+                            Visit GitHub Profile
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
-        <footer class="flex absolute bottom-0 justify-center items-center w-full h-10">
-            <span class="font-semibold text-gray-500">Hecho por <a href="https://github.com/JunLovin", target="_blank" class="underline underline-offset-2">JunLovin</a> con ♥️ y ☕</span>
-        </footer>
+        <section class="faq min-h-[50dvh] flex flex-col items-center justify-center gap-8">
+            <h2 class="text-3xl font-bold leading-normal">Frequently Asked Questions</h2>
+            <div class="flex flex-col gap-4 items-center questions-container">
+                <div class="question bg-[#111827] px-4 py-4 w-2xl h-max rounded-lg flex flex-col gap-2">
+                    <h3 class="font-semibold leading-normal">How does Files Organizer Work?</h3>
+                    <p>Files Organizer automatically scans your Downloads folder and organizes files based on their types into appropiate folders. You can customize the organization rules in the Config section.</p>
+                </div>
+                <div class="question bg-[#111827] px-4 py-4 w-2xl h-max rounded-lg flex flex-col gap-2">
+                    <h3 class="font-semibold leading-normal">Is Files Organizer free to use?</h3>
+                    <p>Yes! Files Organizer is completely free and open-source. You can contribute to the project on our GitHub repository.</p>
+                </div>
+                <div class="question bg-[#111827] px-4 py-4 w-2xl h-max rounded-lg flex flex-col gap-2">
+                    <h3 class="font-semibold leading-normal">Can I customize the organization rules?</h3>
+                    <p>Absolutely! Visit the Config page to customize file organization rules, create custom categories, and set up automated organization schedules.</p>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="bg-[#111827] w-full flex min-h-[20dvh] justify-around items-center px-12 mt-12">
+        <div class="flex flex-col gap-4 footer-left">
+            <div class="flex gap-3 logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24"><path fill="#2ac0ec" d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h6l2 2h8q.825 0 1.413.588T22 8H4v10l2.4-8h17.1l-2.575 8.575q-.2.65-.737 1.038T19 20z"/></svg>
+                <h2 class="text-xl font-bold leading-normal">Files Organizer</h2>
+            </div>
+            <div class="des">
+                <p class="text-[#9CA3AF] max-w-[40ch]">
+                    A minimal, powerful solution for organizing your digital files automatically.
+                </p>
+            </div>
+        </div>
+        <div class="flex gap-2 justify-around mx-auto w-4/5 footer-right">
+            <div class="quick-links">
+                <h3 class="font-semibold">Quick Links</h3>
+                <ul>
+                    <li><a href="#" class="text-[#9CA3AF]">Home</a></li>
+                    <li><a href="#" class="text-[#9CA3AF]">Features</a></li>
+                    <li><a href="#" class="text-[#9CA3AF]">Download</a></li>
+                    <li><a href="#" class="text-[#9CA3AF]">Contact</a></li>
+                </ul>
+            </div>
+            <div class="quick-links">
+                <h3 class="font-semibold">Quick Links</h3>
+                <ul>
+                    <li><a href="#" class="text-[#9CA3AF]">Home</a></li>
+                    <li><a href="#" class="text-[#9CA3AF]">Features</a></li>
+                    <li><a href="#" class="text-[#9CA3AF]">Download</a></li>
+                    <li><a href="#" class="text-[#9CA3AF]">Contact</a></li>
+                </ul>
+            </div>
+            <div class="flex flex-col gap-2 contact">
+                <h3 class="font-semibold">Contact Us</h3>
+                <ul>
+                    <li><a href="mailto:mathiassaid7@gmail.com" class="text-[#9CA3AF]">mathiassaid7@gmail.com</a></li>
+                    <li><a href="#" class="text-[#9CA3AF]">+1 (555) 123-4567</a></li>
+                </ul>
+                <div class="my-2 social-links">
+                    <ul class="flex gap-4 items-center">
+                        <li>
+                            <a href="https://x.com/saidre20" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 14 14"><g fill="none"><g clip-path="url(#primeTwitter0)"><path fill="#bfbfbf" d="M11.025.656h2.147L8.482 6.03L14 13.344H9.68L6.294 8.909l-3.87 4.435H.275l5.016-5.75L0 .657h4.43L7.486 4.71zm-.755 11.4h1.19L3.78 1.877H2.504z"/></g><defs><clipPath id="primeTwitter0"><path fill="#fff" d="M0 0h14v14H0z"/></clipPath></defs></g></svg></a>
+                        </li>
+                        <li>
+                            <a href="https://discordapp.com/users/446418348943867904" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#bfbfbf" d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.1.1 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.1 16.1 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02M8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12m6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12"/></svg></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/JunLovin" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#bfbfbf" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5c.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34c-.46-1.16-1.11-1.47-1.11-1.47c-.91-.62.07-.6.07-.6c1 .07 1.53 1.03 1.53 1.03c.87 1.52 2.34 1.07 2.91.83c.09-.65.35-1.09.63-1.34c-2.22-.25-4.55-1.11-4.55-4.92c0-1.11.38-2 1.03-2.71c-.1-.25-.45-1.29.1-2.64c0 0 .84-.27 2.75 1.02c.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02c.55 1.35.2 2.39.1 2.64c.65.71 1.03 1.6 1.03 2.71c0 3.82-2.34 4.66-4.57 4.91c.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
