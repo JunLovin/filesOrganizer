@@ -14,12 +14,12 @@
 </head>
 <body class="flex flex-col bg-[#1F2937] min-h-dvh text-white w-full">
     <header class="flex justify-between items-center px-12 h-16 bg-[#111827] text-white font-inter w-full">
-        <div class="flex gap-2 justify-center items-center w-max header-left h-max">
+        <div class="flex items-center justify-center gap-2 w-max header-left h-max">
             <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24"><path fill="#2ac0ec" d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h6l2 2h8q.825 0 1.413.588T22 8H4v10l2.4-8h17.1l-2.575 8.575q-.2.65-.737 1.038T19 20z"/></svg>
             <h1 class="text-2xl font-bold">Files Organizer</h1>
         </div>
         <div class="header-right">
-            <ul class="flex gap-12 justify-center items-center w-max h-max nav-list">
+            <ul class="flex items-center justify-center gap-12 w-max h-max nav-list">
                 <li class="flex gap-1 justify-between w-max items-center transition-colors duration-200 hover:text-[#3B82F6] relative">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3L2 12h3v8z"/></svg>
                     <a href="./index.html" class="relative">Inicio</a>
@@ -43,23 +43,23 @@
         <section class="flex gap-4 justify-center items-center form-info-container min-h-[70dvh]">
             <div class="sub-container h-[60dvh] form-info-container flex gap-8 justify-center items-center">
                 <div class="h-full form w-2xl bg-[#111827] p-4 rounded-lg">
-                    <form class="flex flex-col gap-4 justify-around p-4 w-full h-full form-message">
+                    <form class="flex flex-col justify-around w-full h-full gap-4 p-4 form-message">
                         <h3 class="text-2xl font-semibold">Send a Message</h3>
-                        <div class="flex gap-4 justify-around w-full name-email">
-                            <div class="flex flex-col gap-1 w-full name">
+                        <div class="flex justify-around w-full gap-4 name-email">
+                            <div class="flex flex-col w-full gap-1 name">
                                 <label for="name">Name</label>
                                 <input type="text" placeholder="Your name" id="name" name="name" class="bg-[#1F2937] px-4 h-12 rounded-lg outline-0 w-full">
                             </div>
-                            <div class="flex flex-col gap-1 w-full email">
+                            <div class="flex flex-col w-full gap-1 email">
                                 <label for="email">Email</label>
                                 <input type="text" placeholder="your.email@example.com" id="email" name="email" class="bg-[#1F2937] px-4 h-12 rounded-lg outline-0 w-full">
                             </div>
                         </div>
-                        <div class="flex flex-col gap-1 w-full subject">
+                        <div class="flex flex-col w-full gap-1 subject">
                             <label for="subject">Subject</label>
                             <input type="text" placeholder="What is this about?" id="subject" name="subject" class="w-full bg-[#1F2937] px-4 h-12 rounded-lg outline-0">
                         </div>
-                        <div class="flex flex-col gap-1 w-full message">
+                        <div class="flex flex-col w-full gap-1 message">
                             <label for="message">Message</label>
                             <textarea name="message" id="message" placeholder="Type your message here..." class="w-full bg-[#1F2937] px-4 h-40 rounded-lg py-2 outline-0"></textarea>
                         </div>
@@ -112,7 +112,7 @@
         </section>
         <section class="faq min-h-[50dvh] flex flex-col items-center justify-center gap-8">
             <h2 class="text-3xl font-bold leading-normal">Frequently Asked Questions</h2>
-            <div class="flex flex-col gap-4 items-center questions-container">
+            <div class="flex flex-col items-center gap-4 questions-container">
                 <div class="question bg-[#111827] px-4 py-4 w-2xl h-max rounded-lg flex flex-col gap-2">
                     <h3 class="font-semibold leading-normal">How does Files Organizer Work?</h3>
                     <p>Files Organizer automatically scans your Downloads folder and organizes files based on their types into appropiate folders. You can customize the organization rules in the Config section.</p>
@@ -140,7 +140,7 @@
                 </p>
             </div>
         </div>
-        <div class="flex gap-2 justify-around mx-auto w-4/5 footer-right">
+        <div class="flex justify-around w-4/5 gap-2 mx-auto footer-right">
             <div class="quick-links">
                 <h3 class="font-semibold">Quick Links</h3>
                 <ul>
@@ -166,7 +166,7 @@
                     <li><a href="#" class="text-[#9CA3AF]">+1 (555) 123-4567</a></li>
                 </ul>
                 <div class="my-2 social-links">
-                    <ul class="flex gap-4 items-center">
+                    <ul class="flex items-center gap-4">
                         <li>
                             <a href="https://x.com/saidre20" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 14 14"><g fill="none"><g clip-path="url(#primeTwitter0)"><path fill="#bfbfbf" d="M11.025.656h2.147L8.482 6.03L14 13.344H9.68L6.294 8.909l-3.87 4.435H.275l5.016-5.75L0 .657h4.43L7.486 4.71zm-.755 11.4h1.19L3.78 1.877H2.504z"/></g><defs><clipPath id="primeTwitter0"><path fill="#fff" d="M0 0h14v14H0z"/></clipPath></defs></g></svg></a>
                         </li>

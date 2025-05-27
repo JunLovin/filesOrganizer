@@ -3,6 +3,8 @@
 // ? app: Controla la vida de la aplicación
 // ? BrowserWindow: Crea y controla las ventanas de la aplicación
 const { app, BrowserWindow } = require('electron')
+const { ipcMain } = require('electron')
+const { organizeDownloads } = require('./index.js')
 
 // - Creamos la ventana de la aplicación
 const createWindow = () => {
@@ -11,10 +13,14 @@ const createWindow = () => {
     const win = new BrowserWindow({
         width: 1980,
         height: 1080,
-        icon: './public/favicon/favicon-96x96.png'
+        icon: './public/favicon/favicon-96x96.png',
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false
+        }
     })
 
-    win.webContents.openDevTools()
+    // win.webContents.openDevTools()
 
     // ? Removemos el menú por defecto de la aplicación
     win.removeMenu()
@@ -28,4 +34,13 @@ const createWindow = () => {
 app.whenReady().then(() => {
     // ? Llamamos a la función createWindow para crear la ventana de la aplicación
     createWindow()
+
+    ipcMain.handle('organize-files', async () => {
+        try {
+            organizeDownloads()
+            return { success: true }
+        } catch (err) {
+            return { success: false, error: err }
+        }
+    })
 })
